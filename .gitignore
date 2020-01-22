@@ -118,5 +118,7 @@ GitHub.sublime-settings
 .history
 
 # exclude everything
-uploads/*.pdf
-uploads/*.jpg
+uploads/*
+
+# exception to the rule
+!uploads/.gitkeep 
