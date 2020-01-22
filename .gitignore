@@ -119,6 +119,3 @@ GitHub.sublime-settings
 
 # exclude everything
 uploads/*
-
-# exception to the rule
-!uploads/
