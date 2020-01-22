@@ -3,6 +3,6 @@ from django.shortcuts import render
 def index(request):
     context = {
         'title': 'dlib | Digital Library',
-        'heading': 'Find Your World!'
+        'heading': 'Read It!'
     }
-    return render(request, 'home/index.html', context)
+    return render(request, 'books/index.html', context)
