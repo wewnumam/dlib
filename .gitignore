@@ -121,4 +121,4 @@ GitHub.sublime-settings
 uploads/*
 
 # exception to the rule
-!uploads/.gitkeep 
+!uploads/
