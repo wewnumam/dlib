@@ -118,5 +118,4 @@ GitHub.sublime-settings
 .history
 
 # exclude everything
-uploads/*.jpg
-uploads/*.pdf
+uploads/*
