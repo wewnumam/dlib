@@ -116,3 +116,9 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# exclude everything
+uploads/*
+
+# exception to the rule
+!uploads/.gitkeep 

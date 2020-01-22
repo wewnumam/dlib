@@ -2,23 +2,41 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dlib | Digital Library</title>
 </head>
+
 <body>
     {% block container %}
 
-    <div style="background-image: url({% static 'img/home.jpg' %});" class="jumbotron text-center">
-        <h1 class="text-bold text-center white-text" style="margin-top: 17%;">{{ heading }}</h1>
-        <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">arrow_downward</i></a>
+    <div class="text-center">
+        <h1 class="text-bold text-center" style="margin-top: 17%;">{{ heading }}</h1>
     </div>
     <div class="container">
-    
+        <div class="row">
+            {% for book in books %}
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/{{ book.cover }}">
+                        <span class="card-title">{{ book.title }}</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>{{ book.synopsis }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 
     {% endblock container %}
 </body>
+
 </html>
