@@ -6,9 +6,10 @@ class Book(models.Model):
     title = models.CharField(max_length=64)
     category = models.CharField(max_length=64)
     writer = models.CharField(max_length=64)
+    year = models.CharField(max_length=5)
     synopsis = models.TextField()
-    cover = models.FileField(upload_to='static/uploads/', max_length=128, default='default.jpg')
-    filename = models.FileField(upload_to='static/uploads/', max_length=128, default='default.pdf')
+    cover = models.FileField(upload_to='static/uploads/', max_length=128)
+    filename = models.FileField(upload_to='static/uploads/', max_length=128)
     slug = models.SlugField(blank=True, editable=False)
 
     def save(self):

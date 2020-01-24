@@ -18,6 +18,7 @@ def detail(request, input):
         'title': book.title,
         'category': book.category,
         'writer': book.writer,
+        'year': book.year,
         'synopsis': book.synopsis,
         'cover': book.cover,
         'filename': book.filename,

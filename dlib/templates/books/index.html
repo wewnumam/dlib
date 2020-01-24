@@ -44,16 +44,15 @@
         <!-- books card -->
         <div class="row">
             {% for book in books %}
-            <div class="col s12 m4">
+            <div class="col s12 m3">
                 <div class="card">
                     <div class="card-image">
                         <img src="/{{ book.cover }}">
-                        <span class="card-title">{{ book.title }}</span>
                         <a href="/books/{{ book.slug }}" class="btn-floating halfway-fab waves-effect waves-light yellow"><i
                                 class="material-icons">arrow_forward</i></a>
                     </div>
                     <div class="card-content">
-                        <small class="grey-text">{{ book.writer }}</small>
+                        <small class="grey-text">{{ book.year }}</small>
                         <p>{{ book.synopsis|slice:96 }}...</p>
                         <small class="grey-text">{{ book.category }}</small>
                     </div>
