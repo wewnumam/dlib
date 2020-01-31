@@ -2,25 +2,38 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dlib | Digital Library</title>
 </head>
+
 <body>
     {% block container %}
 
     <!-- jumbotron -->
     <div style="background-image: url({% static 'img/home.jpg' %});" class="jumbotron text-center">
         <h1 class="text-bold text-center white-text" style="margin-top: 17%;">{{ heading }}</h1>
-        <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">arrow_downward</i></a>
+        <a href="#!" class="btn-floating btn-large waves-effect waves-light yellow"><i
+                class="material-icons">arrow_downward</i></a>
     </div>
 
     <div class="container">
-    
+        <div class="row" id="!">
+            <div class="col s12 m4 text-center">
+                <i class="large material-icons text-center" style="margin-top: 85px;">library_books</i>
+            </div>
+            <div class="col s12 m8">
+                <h2>Getting Started!</h2>
+                <blockquote style="border-left-color: #ffeb3b;"><b>dlib</b> is a free website which allows you to review and download millions of PDF
+                    files into your devices. In the case that PDF files are withdrawn from the web, then they are also immediately withdrawn from PDF Drive search results. In this way, our PDF Drive library stays up-to-date, while continuously growing and offering you an enormous database to search.</blockquote>
+            </div>
+        </div>
     </div>
 
     {% endblock container %}
 </body>
+
 </html>
