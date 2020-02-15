@@ -1,0 +1,56 @@
+{% extends "snippets/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dlib | Digital Library</title>
+</head>
+
+<body>
+    {% block container %}
+
+    <div class="container">
+        <br><br><br><br>
+        {% if registered %}
+        <h1 class="center-align">Thank you for registering!</h1>
+        {% else %}
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card login-card">
+                    <div class="card-content white-text">
+                        <h4 class="black-text center-align">Signup</h4><br>
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="input-field">
+                                {{ user_form.username.label_tag }}
+                                {{ user_form.username }}
+                            </div>
+                            <div class="input-field">
+                                {{ user_form.email.label_tag }}
+                                {{ user_form.email }}
+                            </div>
+                            <div class="input-field">
+                                {{ user_form.password.label_tag }}
+                                {{ user_form.password }}
+                            </div>
+                            <br>
+                            <div class="input-field row">
+                                <button type="submit"
+                                    class="waves-effect waves-light btn-large yellow black-text col s12">Register</button>
+                            </div>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock container %}
+</body>
+
+</html>

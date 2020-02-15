@@ -9,4 +9,5 @@ urlpatterns = [
     path('books/', include('books.urls')),
     path('login/', views.signin),
     path('logout/', views.signout),
+    path('signup/', views.signup)
 ]

@@ -16,32 +16,32 @@
     <div class="container">
         <br><br><br><br>
         <div class="row">
-            <div class="col s12 m6">
-                <div class="card">
+            <div class="col s6 offset-s3">
+                <div class="card login-card">
                     <div class="card-content white-text">
                         <h4 class="black-text center-align">Login</h4><br>
                         <form action="" method="post">
                             {% csrf_token %}
                             <div class="input-field">
-                                <input placeholder="Placeholder" id="username" name="username" type="text" class="validate">
-                                <label for="first_name">Username</label>
+                                <input id="username" name="username" type="text" class="validate">
+                                <label for="username">Username</label>
                             </div>
                             <div class="input-field">
                                 <input id="password" name="password" type="password" class="validate">
                                 <label for="password">Password</label>
                             </div><br>
                             <div class="input-field row">
-                                <input type="submit" id="login" name="login" value="login"
-                                    class="waves-effect waves-light btn-large yellow black-text col s12">
+                                <button type="submit" name="login"
+                                    class="waves-effect waves-light btn-large yellow black-text col s12">Login</button>
                             </div>
                         </form>
+                        <br>
+                        <p class="center-align black-text">Doesn't have account? <a href="/signup">register here!</a></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    {% endblock container %}
+            {% endblock container %}
 </body>
 
 </html>
